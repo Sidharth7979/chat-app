@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>h1{
+        text-align: center;
+    }
+        body{
+            font-family:"Poppins";
+            font-weight: 500;
+            background-color: rgb(213, 255, 241);
+        }
+        .container{
+            margin: auto;
+            padding: 10px;
+            width: 400px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        h2{
+            margin-left: 20px;
+        }
+        input{
+            font-family:"Poppins";
+            
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        label{
+            margin-top: 10px;
+            margin-left: 20px;
+            
+        }
+        input[type=email]{
+            width: 88%;
+            height: 30px;
+        }
+        input[type=button]{
+            width: 88%;
+            height: 40px;
+            border-radius: 5px;
+            background-color: #2563eb;
+            color: white;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+
+    <!-- swal.fire files -->
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>ConnectMe</h1>
+    <div class="container">
+        <h2>Recovery Password</h2>
+        <label for="user_email">Email Address</label><br>
+        <input type="email" id="user_email" placeholder="youremail@example.com"><br>
+        <input type="button" id="Reset" value="Reset Password" >
+    </div>
+     <p>Some how remembered? <a href="login.html">Login</a></p>
+      
+    <script type="module">
+        import{resetpassword} from "http://127.0.0.1:5500/main.js";
+        const reset = document.getElementById("Reset");
+        reset.addEventListener("click",resetpassword);
+
+    </script>
+</body>
+</html>

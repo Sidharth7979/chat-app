@@ -1,0 +1,688 @@
+
+        .container{
+            border: 1px solid black;
+            margin: auto;
+            height: 590px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: 70px 80px 1fr 1fr 80px;
+            grid-template-areas: "header header header"
+                                 "chathead msghead rightSidebar"
+                                 "leftSidebar main rightSidebar"
+                                 "leftSidebar main rightSidebar"
+                                 "leftSidebar footer rightSidebar";
+        }
+        .box{
+            border: 0.5px solid blueviolet;
+        }
+        /* top header bar all icon */
+        .header{
+            grid-area: header;
+            display: flex;
+        }
+        /* header left side */
+.comment1{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-comment-dots{
+font-size: 20px;
+margin-top:16px;
+margin-left:15px;
+}
+.person{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-address-book{
+font-size: 20px;
+margin-top:16px;
+margin-left:15px;
+}
+.robot{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-robot{
+font-size: 20px;
+margin-top:14px;
+margin-left:13px;
+}
+.profile{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-address-card{
+font-size: 20px;
+margin-top:14px;
+margin-left:13px;
+}
+/* header right side icon */
+
+.copy{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 25px;
+cursor: pointer;   
+}
+.fa-copy{
+font-size: 20px;
+margin-top:14px;
+margin-left:16px;
+}
+.link{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 690px;
+cursor: pointer; 
+}
+.fa-link{
+font-size: 20px;
+margin-top:14px;
+margin-left:12px;
+}
+.notification{
+height: 50px;
+width: 50px;
+border-radius: 50px;
+background-color: rgb(191,219,254);
+margin-top: 8px;
+margin-left: 26px;
+cursor: pointer; 
+}
+.fa-envelope{
+font-size: 20px;
+margin-top:14px;
+margin-left:15px;
+}
+
+.img #img{
+height: 60px;
+width: 60px;
+border-radius: 50%;
+    object-fit: contain;
+    cursor: pointer; 
+ margin-top: 3px;
+ margin-left: 20px;
+}
+        .chathead{
+            grid-area: chathead;
+        }
+        .msghead{
+            grid-area: msghead;
+        }
+        .leftSidebar{
+            grid-area: leftSidebar;
+        }
+        .main{
+            grid-area: main;
+            overflow: scroll;
+        }
+        .rightSidebar{
+            grid-area: rightSidebar;
+        }
+        .footer{
+            grid-area: footer;
+            display:flex;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+        .footer input[type=text]{
+            width: 400px;
+            height: 30px;
+            border-radius: 20px;
+        }
+        
+        #sendButton{
+            background-color: rgb(228, 16, 16);
+            width: 80px;
+            height: 50px;
+            border-radius: 20px;
+        }
+
+       
+
+        .appicon{
+            width: 60px;
+            height: 70px;
+            border-right: 1px solid black;
+
+        }
+        .fa-comment{
+        
+            font-size: 50px;
+            margin-left: 5px;
+            margin-top: 5px;
+           
+        }
+        /* icon style */
+        #emojiButton{ border-radius: 50%;
+            height: 40px;
+            width: 40px;
+
+        }
+        .fa-face-smile{
+            font-size: xx-large;
+        }
+        .emoji-container{
+            position: absolute;
+            bottom: calc(100%+5px);
+            display: none;
+            left: 365px;
+            top: 370px;
+            width: 45%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .emoji{
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        /* chat right and left */
+        
+.message {
+clear: both;
+padding: 8px;
+border-radius: 8px;
+margin: 8px;
+max-width: 70%;
+}
+
+.sender {
+float: left;
+background-color: #2196F3;
+}
+
+.receiver {
+float: right;
+background-color: #E9E9EB;
+}
+
+/* main header icons */
+
+
+.contact{
+display: flex;
+}
+.call{
+height: 40px;
+width: 40px;
+border-radius: 5px;
+background-color: rgb(191,219,254);
+margin-top: 22px;
+margin-left: 550px;
+cursor: pointer; 
+}
+.fa-phone{
+font-size: 20px;
+margin-top:10px;
+margin-left:10px;
+}
+.vediocall{
+height: 40px;
+width: 40px;
+border-radius: 5px;
+background-color: rgb(191,219,254);
+margin-top: 22px;
+margin-left: 25px;
+cursor: pointer; 
+}
+.fa-video{
+font-size: 20px;
+margin-top:10px;
+margin-left:10px;
+}
+
+.search{
+height: 40px;
+width: 40px;
+border-radius: 5px;
+background-color: rgb(191,219,254);
+margin-top: 22px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-magnifying-glass{
+font-size: 20px;
+margin-top:10px;
+margin-left:10px;
+}
+.inbox{
+height: 40px;
+width: 40px;
+border-radius: 5px;
+background-color: rgb(191,219,254);
+margin-top: 22px;
+margin-left: 25px;
+cursor: pointer;
+}
+.fa-inbox{
+font-size: 20px;
+margin-top:10px;
+margin-left:10px;   
+}
+
+/* left  chathead  */
+.chathead{
+    display: flex;
+}
+.fa-plus{
+font-size: 10px;
+margin-top: 30px;
+margin-left: 100px;
+cursor: pointer;
+}
+.fa-filter
+{
+font-size: 10px;
+margin-top: 30px;
+margin-left: 20px; 
+cursor: pointer;
+
+}
+
+#find{
+height: 30px;
+border-radius: 10px;
+border: 0px solid;
+outline: none;
+background-color: rgb(226,232,240);
+width: 220px;
+margin-left: 20px;
+margin-top: -10px;
+padding-left: 20px;
+}
+/* left sidebaar */
+.dog{width: 280px;
+    height: 150px;
+ border: 2px solid black;
+ background-color: blueviolet;
+}
+.rightprofile{
+    overflow: hidden;
+    width: 60px;
+    height: 60px;
+    border: 0.5px solid black;
+    border-radius: 10px;
+    margin-left: 110px;
+    margin-top: -20px;
+
+}
+
+/* sidharth profile div in right side */
+#profilesid{
+    position: absolute;
+    display: none;
+    height: 350px;
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid #DBEAFE;
+    background-color: rgb(255,255,255);
+    top: 85px;
+    right: 20px;        
+}
+
+#img1{
+    height:63px;
+    width: 60px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+
+}
+#name{
+    font-size: 20px;
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    margin-left: 50px;
+}
+.fa-check-double{
+    position: absolute;
+    top: 10px;
+    left: 120px;
+    background-color: #2196F3;
+    border-radius: 40px;
+    font-size: 15px;
+    margin-top: 12PX;
+}
+.mode{
+    height: 70px;
+    border-bottom: 1px solid #DBEAFE;
+    font-size: 0.875rem;
+}
+.moon{
+    height: 30px;
+    font-size: 0.875rem;
+
+
+}
+.fa-moon{
+    font-size: 22px;
+    margin-left: 24px;
+    margin-top: 10px;
+   
+}
+#on{
+    margin-left: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+#off{
+    cursor: pointer;
+}
+.pro2{
+    height: 120px;
+    border-bottom: 1px solid #DBEAFE;
+  cursor: pointer;
+  
+
+}
+.pro2{
+  
+    margin-top: 23px;
+    padding-left: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-size: large;
+
+}
+.logout{
+    padding-top: 30px;
+    padding-left: 20px;
+  font-size: 12px;
+  cursor: pointer;
+  font-size: x-large;
+}
+.logout:hover{
+    color: #2196F3;
+}
+.pro2 a:hover{
+    color: #2196F3;
+}
+#on:hover{
+    color: #2196F3;
+}
+#off:hover{
+    color: #2196F3;
+}
+/* quick links right side top  */
+#quicklinks{
+    height: 460px;
+    width: 200px;
+    border: 1px solid #DBEAFE;
+    border-radius: 5px;
+    position: absolute;
+    right: 180px;
+    top: 75px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.quicklinks{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.chats a:hover{
+    color: #2196F3;
+}
+.contacts a:hover{
+    color: #2196F3;
+}
+.stories a:hover{
+    color: #2196F3;
+}
+.chatbot a:hover{
+    color: #2196F3;
+}
+.chatbots2 a:hover{
+    color: #2196F3;
+}
+.chatbotwelcome a:hover{
+    color: #2196F3;
+}
+.pricing a:hover{
+    color: #2196F3;
+}
+.faq a:hover{
+    color: #2196F3;
+}
+.chatbotwelcome{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.pricing{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.faq{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.UI{
+    margin-top: 15px;
+    margin-left: 13px;
+}
+.chatreplies{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.chatreplies a:hover{
+    color: #2196F3;
+}
+.usecasemodels{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.usecasemodels a:hover{
+    color: #2196F3;
+}
+.miscelements{
+    margin-top: 15px;
+    margin-left: 15px;
+}
+.miscelements a:hover{
+    color: #2196F3;
+}
+
+/* notifications */
+
+.not{
+    border: 1px solid #DBEAFE;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    right: 130px;
+    top: 75px;
+    background-color: white;
+    display: none;
+}
+.not1{
+    display: flex;
+    border: 1px solid #DBEAFE;
+    height: 50px;
+}
+.not2{
+    margin-top: 14px;
+    margin-left: 8px;
+}
+.unread{
+    margin-left: 100px;
+    margin-top: 14px;
+}
+.unread a:hover{
+    color: #2196F3;
+}
+.all{
+    margin-left: 20px;
+    margin-top: 14px;
+}
+.all a:hover{
+    color: #2196F3;
+}
+
+/* left side profile */
+
+.leftprofile{ display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: #F1F5F9;
+
+
+}
+.leftprofile:hover{
+    cursor: pointer;
+    background-color:  #b4c8dc;
+}
+
+
+#imgsidleft{ 
+    overflow: hidden;
+border-radius: 10px;
+width: 50px;
+height: 50px;
+
+}
+#text{
+    padding: 10px;
+}
+
+/* for 2nd profile */
+.leftprofile2{ display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: #F1F5F9;
+    
+
+    
+
+
+}
+.leftprofile2:hover{
+    cursor: pointer;
+    background-color: #b4c8dc;
+    
+}
+
+
+#imgsidleft2{ 
+    
+overflow: hidden;
+border-radius: 10px;
+width: 50px;
+height: 50px;
+
+}
+#text2{
+    padding: 10px;
+    
+}
+
+/* for change password  */
+
+#changepassword{
+    position: absolute;
+    top: 75px;
+    left: -255px;
+    height: 325px;
+    width: 222px;
+    background-color: pink;
+    padding-top: 10px;
+    padding-left: 10px;
+    display: none;
+    
+    
+}
+#submitpass{
+   display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: #F1F5F9;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    font-weight: bold;
+    margin-top: 20px;
+
+ 
+}
+#cancelpass{
+    display: flex;
+    margin: 10px;
+    padding: 10px;
+    background-color: #F1F5F9;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: greenyellow;
+    font-weight: bold;
+    margin-top: 20px;
+
+}
+#mybtn{ position: relative;
+    left: 155px;
+    top: -52px;
+    width: 60px;
+    height: 30px;
+    background-color: gold;
+
+}
+/* for adding a profile pic */
+#profileContainer{
+    width: 180px;
+    height: 300px;
+    background-color: green;
+    position: absolute;
+    left: -260px;
+    top: 75px;
+    padding: 20px;
+    display: none;
+
+}
+#profileContainerlable{
+    font-size: x-large;
+    
+
+}
+#profileContainer input[type=button]{
+
+    margin-top: 30px;
+    background-color: gold;
+}

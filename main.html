@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <!-- font awesome icons files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- swal.fire library files -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+    crossorigin="anonymous"></script>
+<!-- change pass script -->
+    <script type="module" src="changepassword.js"></script>
+</head>
+<body><div class="box container">
+    <div class="box header">
+        <div class="appicon" onclick="open()"><i class="fa-solid fa-comment"></i></div>
+        <div class="comment1"> <i class="fa-regular fa-comment-dots"></i></div>
+        <div class="person"><i class="fa-solid fa-address-book"></i></div>
+        <div class="robot"><i class="fa-solid fa-robot"></i></div>
+        <div class="profile"><i class="fa-regular fa-address-card"></i></div>
+        <div class="copy"><i class="fa-solid fa-copy"></i></div>
+        <!-- adding links in header top right -->
+        <div onclick=" quicklinks.style.display = quicklinks.style.display === 'block' ? 'none' : 'block';" class="link"><i class="fa-solid fa-link"></i>
+            <div id="quicklinks">
+                <div class="quicklinks">Quick links</div>
+                <div class="chats"><a href="#"><i class="fa-regular fa-comment-dots"></i> &nbsp;&nbsp;Chats</a></div>
+                <div class="contacts"><a href="#"><i class="fa-solid fa-address-book"></i> &nbsp;&nbsp;Contacts</a></div>
+                <div class="stories"><a href="#"><i class="fa-solid fa-copy"></i> &nbsp;&nbsp;Stories</a></div>
+                <div class="chatbot"><a href="#"><i class="fa-solid fa-robot"></i>&nbsp;&nbsp;ChatBot</a></div>
+                <div class="chatbots2"><a href="#"><i class="fa-regular fa-address-card"></i>&nbsp;&nbsp;ChatBot S2</a></div>
+                <div class="chatbotwelcome"><a href="#"><i class="fa-solid fa-door-open"></i>&nbsp;&nbsp;Chatbot Welcome</a></div>
+                <div class="pricing"><a href="#"><i class="fa-solid fa-tag"></i>&nbsp;&nbsp;Pricing</a></div>
+                <div class="faq"><a href="#"><i class="fa-regular fa-circle-question"></i>&nbsp;&nbsp;FAQ</a></div>
+                <div class="UI">UI Components</div>
+                <div class="chatreplies"><a href="#"><i class="fa-solid fa-message"></i>&nbsp;&nbsp;Chat Replies</a></div>
+                <div class="usecasemodels"><a href="#"><i class="fa-regular fa-square"></i>&nbsp;&nbsp;Usecase Models</a></div>
+                <div class="miscelements"><a href="#"><i class="fa-solid fa-microchip"></i>&nbsp;&nbsp;Misc Elements</a></div>
+            </div>
+            </div>
+
+        <!-- onclick for notification bar top right
+        with fuction  onclick ==shownotif -->
+
+        <div  class="notification" onclick="not.style.display =not.style.display === 'block'?'none':'block';"><i class="fa-solid fa-envelope"></i>
+                <div class="not" id="not">
+                <div class="not1">
+                <div class="not2">Notification</div>
+                <div class="unread"><a href="#">Unread</a></div>
+                <div class="all"><a href="#">All</a></div>
+                </div>
+                <div class="realnotif">
+            </div>
+            </div>        
+            </div>
+        <div class="img"><img src="unnamed (1).jpg" id="img" onclick="profilesid.style.display = profilesid.style.display === 'block' ? 'none' : 'block';" >
+
+
+        <!-- profile right side  -->
+
+
+        <div id="profilesid">
+            <div><img id="img1" src="./unnamed (1).jpg" ></div>
+        <div id="name">
+           <p> Sidharth <br> Liked that disco <br>music <i class="fa-solid fa-check-double"></i></p>
+        </div>
+        <div class="mode">
+           <div class="moon"> <i class="fa-solid fa-moon"></i> &nbsp;&nbsp; Darkmode</div> 
+           <input type="radio" name="mode" id="on"><label for="on">ON</label>
+           
+           <input type="radio" name="mode" id="off"><label for="off">Off</label>
+
+        </div>
+        <div class="pro2">
+
+            <!-- FOR adding a profile pic -->
+            <a href="#"><i class="fa-regular fa-user" onclick="profileContainer.style.display=profileContainer.style.display==='block'?'none':'block';"></i> &nbsp;&nbsp;&nbsp;ADD PROFILE</a><br><br>
+            <div id="profileContainer">
+                <label id="profileContainerlable" for="">Add your profile pic</label>
+                <input type="file" id="file">
+                <input type="button" value="file upload" onclick="upload()">
+                <div id="preview"></div>
+
+
+            </div>
+
+
+
+
+            <a href="#"><i class="fa-solid fa-gear"></i> &nbsp;&nbsp;&nbsp;Setting</a><br><br>
+
+            <!-- for change password in right side  -->
+            
+            <a onclick=" changepassword.style.display=changepassword.style.display=== 'block'?'none':'block';" href="#"><i class="fa-solid fa-unlock"></i> &nbsp;&nbsp;&nbsp;Change Password</a>
+          <div id="changepassword">
+            <label id="labeloldpass" for="OLDPASS">NEW PASSWORD</label>
+            <input type="password" id="OLDPASS"><br>
+            <input id="mybtn" type="button" value="show"><br>
+            <label id="labelnewpass" for="NEWPASS">CONFIRM PASSWORD</label>
+            <input type="password" id="NEWPASS">
+            <input id="submitpass" type="button" value="Submit" onclick="validatePassword()" >
+            <input id="cancelpass" type="button" value="CLOSE">
+        </div>
+        </div>
+        <div class="logout" id="logout"><i class="fa-solid fa-power-off"></i> &nbsp;&nbsp;&nbsp;logout</div>
+     </div>
+    </div>
+
+
+    </div>
+    <div class="chathead">
+        <div class="head">
+            <h2>Chat</h2>
+        </div>
+        <div class="new"><i class="fa-solid fa-plus"> &nbsp; New</i></div>
+        <div class="filter"><i class="fa-solid fa-filter"> &nbsp; Filter</i></div>
+    
+    </div>
+    <div class="box msghead">
+        <div class="contact">
+            <div class="call"><i class="fa-solid fa-phone"></i></div>
+            <div class="vediocall"><i class="fa-solid fa-video"></i></div>
+            <div class="search"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="inbox"><i class="fa-solid fa-inbox"></i></div>
+        </div>
+    </div>
+    <!-- left sidebar -->
+    <div class="leftSidebar">
+        <input type="text" id="find" placeholder="Search contect / chat">
+    
+
+    <div class="leftprofile">
+        <div id="imgsidleft">
+        <img  src="unnamed (1).jpg" width="50" height="50" ></div>
+       <div id="text"> <strong>Sidharth Thakur </strong><br>
+        Had they visited...</div>
+
+    </div>
+    
+    <div class="leftprofile2">
+        <div id="imgsidleft2">
+        <img  src="unnamed (1).jpg" width="50" height="50" ></div>
+       <div id="text2"> <strong>Chandan Thakur </strong><br>
+        bye brother typing...</div>
+
+    </div>
+
+
+</div>
+
+    <!-- right sidebar -->
+    <div class="box rightSidebar">
+        <div class="dog" >
+            <img src="1.jpg" width="280" height="150" >
+  </div>
+        <div class=" rightprofile">
+            <img src="./unnamed (1).jpg" width="60" height="60">
+        
+        </div>
+       
+    </div>
+    <div class="box main" id="chatsView">
+        <!-- <input type="text" id="usernameInput"> -->
+        <!-- <button id="joinButton">Enter</button> -->
+        <div id="joinView"></div>
+        <div id="messageList"></div>
+    </div>
+    <div class="box footer">
+        <div class="plues"><i class="fa fa-plus-circle" aria-hidden="true"></i></div>
+        <div class="insertimg"> <i class="fa-solid fa-image"></i></div>
+        <div class="microphone"><i class="fa-solid fa-microphone"></i></div>
+        <input type="text" id="messageInput" placeholder="typing">
+        <div id="emojiButton"><i class="fa-solid fa-face-smile"></i>
+            <div class="emoji-container" id="emojiContainer">
+                <!-- Generate 50 emojis -->
+                <!-- You can use a loop to generate emojis dynamically, but for simplicity, I'll list them manually -->
+                <div class="emoji" onclick="selectEmoji('😀')">😀</div>
+                <div class="emoji" onclick="selectEmoji('😃')">😃</div>
+                <div class="emoji" onclick="selectEmoji('😄')">😄</div>
+                <div class="emoji" onclick="selectEmoji('😁')">😁</div>
+                <div class="emoji" onclick="selectEmoji('😆')">😆</div>
+                <div class="emoji" onclick="selectEmoji('😅')">😅</div>
+                <div class="emoji" onclick="selectEmoji('😂')">😂</div>
+                <div class="emoji" onclick="selectEmoji('🤣')">🤣</div>
+                <div class="emoji" onclick="selectEmoji('😊')">😊</div>
+                <div class="emoji" onclick="selectEmoji('😇')">😇</div>
+                <div class="emoji" onclick="selectEmoji('🙂')">🙂</div>
+                <div class="emoji" onclick="selectEmoji('🙃')">🙃</div>
+                <div class="emoji" onclick="selectEmoji('😉')">😉</div>
+                <div class="emoji" onclick="selectEmoji('😌')">😌</div>
+                <div class="emoji" onclick="selectEmoji('😍')">😍</div>
+                <div class="emoji" onclick="selectEmoji('😘')">😘</div>
+                <div class="emoji" onclick="selectEmoji('😗')">😗</div>
+                <div class="emoji" onclick="selectEmoji('😚')">😚</div>
+                <div class="emoji" onclick="selectEmoji('😙')">😙</div>
+                <div class="emoji" onclick="selectEmoji('😋')">😋</div>
+                <div class="emoji" onclick="selectEmoji('😛')">😛</div>
+                <div class="emoji" onclick="selectEmoji('😜')">😜</div>
+                <div class="emoji" onclick="selectEmoji('🤪')">🤪</div>
+                <div class="emoji" onclick="selectEmoji('😝')">😝</div>
+                <div class="emoji" onclick="selectEmoji('🤑')">🤑</div>
+                <div class="emoji" onclick="selectEmoji('🤗')">🤗</div>
+                <div class="emoji" onclick="selectEmoji('🤭')">🤭</div>
+                <div class="emoji" onclick="selectEmoji('🤫')">🤫</div>
+                <div class="emoji" onclick="selectEmoji('🤔')">🤔</div>
+                <div class="emoji" onclick="selectEmoji('🤐')">🤐</div>
+                <div class="emoji" onclick="selectEmoji('🤨')">🤨</div>
+                <div class="emoji" onclick="selectEmoji('😐')">😐</div>
+                <div class="emoji" onclick="selectEmoji('😑')">😑</div>
+                <div class="emoji" onclick="selectEmoji('😶')">😶</div>
+                <div class="emoji" onclick="selectEmoji('😏')">😏</div>
+                <div class="emoji" onclick="selectEmoji('😒')">😒</div>
+                <div class="emoji" onclick="selectEmoji('🙄')">🙄</div>
+                <div class="emoji" onclick="selectEmoji('😬')">😬</div>
+                <div class="emoji" onclick="selectEmoji('🤥')">🤥</div>
+                <div class="emoji" onclick="selectEmoji('😔')">😔</div>
+                <div class="emoji" onclick="selectEmoji('😪')">😪</div>
+                <div class="emoji" onclick="selectEmoji('🤤')">🤤</div>
+                <div class="emoji" onclick="selectEmoji(' ')"> </div>
+                </div>
+        
+        </div>
+        
+        <input id="sendButton" type="button" value="Send" onclick="">
+    </div>
+
+    <script type="module">
+        import {logoutfunc} from "http://127.0.0.1:5500/main.js";
+        const logout=document.getElementById("logout");
+        logout.addEventListener("click",logoutfunc);
+    </script>
+    <script type="module" src="main.js"></script>
+
+       
+
+</body>
+</html>
